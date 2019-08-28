@@ -1,0 +1,2 @@
+# BlankBatteryState
+BlankBatteryState
