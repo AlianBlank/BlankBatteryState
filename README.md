@@ -9,10 +9,31 @@
 
 ```csharp
 
-    if (GUILayout.Button (" GET DeviceUniqueIdentifier ", GUILayout.Width (200), GUILayout.Height (200))) 
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BlankBatteryStateExample : MonoBehaviour
+{
+    private string result = "";
+    // Update is called once per frame
+    void OnGUI()
     {
-        id = BlankDeviceUniqueIdentifier.DeviceUniqueIdentifier;
+        if (GUILayout.Button("BlankBatteryState", GUILayout.Width(300), GUILayout.Height(200)))
+        {
+            try
+            {
+                result = BlankBatteryState.GetBatteryState();
+            }
+            catch (Exception e)
+            {
+                result = e.Message;
+            }
+
+        }
+        GUILayout.Label(result);
     }
-    GUILayout.Label (" DeviceUniqueIdentifier : "+ id);
+}
 
 ```
