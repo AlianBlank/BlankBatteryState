@@ -2,11 +2,16 @@
 
 用于在 Unity3D 中获取Android 和 iOS 平台上电池状态和电量值的插件
 
-# Docs
-> [文档连接在这里](https://blog.alianhome.com/BlankBatteryState)
+# Example 
 
-# Demo 
+> Return Result Fromat 返回值格式
 
+> {"status":1,"value":100}
+
+> status => 1 状态未知 2 电池充电中 3  放电中 4 未充电 5 满电量
+
+> value => BatteryValue  电量值
+> 
 ```csharp
 
 using System;
